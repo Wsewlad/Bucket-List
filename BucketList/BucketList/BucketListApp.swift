@@ -14,6 +14,11 @@ struct BucketListApp: App {
     
     @State var blurRadius: CGFloat = 0
     
+    init() {
+        configureNavBar()
+        configureTabBar()
+    }
+    
     var body: some Scene {
         WindowGroup {
             RootView()
@@ -31,6 +36,38 @@ struct BucketListApp: App {
                         print("unknown")
                     }
                 })
+        }
+    }
+}
+
+//MARK: - configureNavBar
+private extension BucketListApp {
+    func configureNavBar() {
+        let coloredAppearance = UINavigationBarAppearance()
+        coloredAppearance.configureWithOpaqueBackground()
+//        coloredAppearance.titleTextAttributes = [.font: UIFont(name: "Montserrat SemiBold", size: 16)!]
+//        coloredAppearance.largeTitleTextAttributes = [.font: UIFont(name: "Montserrat Bold", size: 34)!]
+        coloredAppearance.shadowColor = .clear
+//        coloredAppearance.backgroundColor = UIColor(named: "lcLightGrayBackground")
+        UINavigationBar.appearance().standardAppearance = coloredAppearance
+        UINavigationBar.appearance().compactAppearance = coloredAppearance
+        UINavigationBar.appearance().scrollEdgeAppearance = coloredAppearance
+    }
+}
+
+//MARK: - configureTabBar
+private extension BucketListApp {
+    func configureTabBar() {
+        UITabBar.appearance().barTintColor = .white
+        UITabBar.appearance().tintColor = UIColor.gray
+        UITabBar.appearance().isTranslucent = true
+        
+        if #available(iOS 15.0, *) {
+            let appearance = UITabBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            appearance.backgroundColor = .white
+            UITabBar.appearance().standardAppearance = appearance
+            UITabBar.appearance().scrollEdgeAppearance = UITabBar.appearance().standardAppearance
         }
     }
 }

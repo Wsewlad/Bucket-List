@@ -23,6 +23,7 @@
 		82C7AEC328CE7A9E00F0563E /* AppLockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C7AEC228CE7A9E00F0563E /* AppLockViewModel.swift */; };
 		82C7AEC628CE831200F0563E /* AppLockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C7AEC528CE831200F0563E /* AppLockView.swift */; };
 		82C7AEC928CE83F600F0563E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C7AEC828CE83F600F0563E /* SettingsView.swift */; };
+		82C7AECB28CE853400F0563E /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C7AECA28CE853400F0563E /* RootViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		82C7AEC228CE7A9E00F0563E /* AppLockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLockViewModel.swift; sourceTree = "<group>"; };
 		82C7AEC528CE831200F0563E /* AppLockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLockView.swift; sourceTree = "<group>"; };
 		82C7AEC828CE83F600F0563E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		82C7AECA28CE853400F0563E /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				82C7AE8528CE599600F0563E /* RootView.swift */,
+				82C7AECA28CE853400F0563E /* RootViewModel.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				82C7AEC328CE7A9E00F0563E /* AppLockViewModel.swift in Sources */,
 				82C7AEB728CE5DC300F0563E /* FileManager.swift in Sources */,
 				82C7AEC628CE831200F0563E /* AppLockView.swift in Sources */,
+				82C7AECB28CE853400F0563E /* RootViewModel.swift in Sources */,
 				82C7AEC928CE83F600F0563E /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -551,6 +555,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -582,6 +587,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
