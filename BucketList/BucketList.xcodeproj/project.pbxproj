@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		82C7AE8428CE599600F0563E /* BucketListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C7AE8328CE599600F0563E /* BucketListApp.swift */; };
-		82C7AE8628CE599600F0563E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C7AE8528CE599600F0563E /* ContentView.swift */; };
+		82C7AE8628CE599600F0563E /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C7AE8528CE599600F0563E /* RootView.swift */; };
 		82C7AE8828CE599900F0563E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82C7AE8728CE599900F0563E /* Assets.xcassets */; };
 		82C7AE8B28CE599900F0563E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82C7AE8A28CE599900F0563E /* Preview Assets.xcassets */; };
 		82C7AE9528CE599A00F0563E /* BucketListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C7AE9428CE599A00F0563E /* BucketListTests.swift */; };
@@ -17,6 +17,9 @@
 		82C7AEB328CE5C0300F0563E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C7AEB228CE5C0300F0563E /* User.swift */; };
 		82C7AEB728CE5DC300F0563E /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C7AEB628CE5DC300F0563E /* FileManager.swift */; };
 		82C7AEB928CE600D00F0563E /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C7AEB828CE600D00F0563E /* Bundle.swift */; };
+		82C7AEBC28CE666100F0563E /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C7AEBB28CE666100F0563E /* MapView.swift */; };
+		82C7AEBE28CE66BA00F0563E /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C7AEBD28CE66BA00F0563E /* MapViewModel.swift */; };
+		82C7AEC028CE69B500F0563E /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C7AEBF28CE69B400F0563E /* Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +42,7 @@
 /* Begin PBXFileReference section */
 		82C7AE8028CE599600F0563E /* BucketList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BucketList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82C7AE8328CE599600F0563E /* BucketListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListApp.swift; sourceTree = "<group>"; };
-		82C7AE8528CE599600F0563E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		82C7AE8528CE599600F0563E /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		82C7AE8728CE599900F0563E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82C7AE8A28CE599900F0563E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		82C7AE9028CE599A00F0563E /* BucketListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BucketListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +53,9 @@
 		82C7AEB228CE5C0300F0563E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		82C7AEB628CE5DC300F0563E /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		82C7AEB828CE600D00F0563E /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+		82C7AEBB28CE666100F0563E /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		82C7AEBD28CE66BA00F0563E /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		82C7AEBF28CE69B400F0563E /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +111,6 @@
 				82C7AEAF28CE5A6E00F0563E /* Domain */,
 				82C7AEB028CE5AE200F0563E /* Modules */,
 				82C7AEAD28CE5A3400F0563E /* Resources */,
-				82C7AE8528CE599600F0563E /* ContentView.swift */,
 				82C7AE8928CE599900F0563E /* Preview Content */,
 			);
 			path = BucketList;
@@ -163,6 +168,7 @@
 		82C7AEB028CE5AE200F0563E /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				82C7AEBA28CE663200F0563E /* MapView */,
 				82C7AEB428CE5D6300F0563E /* Root */,
 			);
 			path = Modules;
@@ -172,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				82C7AEB228CE5C0300F0563E /* User.swift */,
+				82C7AEBF28CE69B400F0563E /* Location.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -179,6 +186,7 @@
 		82C7AEB428CE5D6300F0563E /* Root */ = {
 			isa = PBXGroup;
 			children = (
+				82C7AE8528CE599600F0563E /* RootView.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -190,6 +198,15 @@
 				82C7AEB828CE600D00F0563E /* Bundle.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		82C7AEBA28CE663200F0563E /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				82C7AEBB28CE666100F0563E /* MapView.swift */,
+				82C7AEBD28CE66BA00F0563E /* MapViewModel.swift */,
+			);
+			path = MapView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,9 +339,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82C7AE8628CE599600F0563E /* ContentView.swift in Sources */,
+				82C7AE8628CE599600F0563E /* RootView.swift in Sources */,
+				82C7AEBC28CE666100F0563E /* MapView.swift in Sources */,
+				82C7AEC028CE69B500F0563E /* Location.swift in Sources */,
 				82C7AE8428CE599600F0563E /* BucketListApp.swift in Sources */,
 				82C7AEB328CE5C0300F0563E /* User.swift in Sources */,
+				82C7AEBE28CE66BA00F0563E /* MapViewModel.swift in Sources */,
 				82C7AEB928CE600D00F0563E /* Bundle.swift in Sources */,
 				82C7AEB728CE5DC300F0563E /* FileManager.swift in Sources */,
 			);
