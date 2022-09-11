@@ -6,38 +6,22 @@
 //
 
 import SwiftUI
-import LocalAuthentication
 
 struct RootView: View {
-    @State private var isUnlocked = false
+    @EnvironmentObject var appLockVM: AppLockViewModel
     
     var body: some View {
-        VStack {
-            if isUnlocked {
+        ZStack {
+            if !appLockVM.isAppLockEnabled || appLockVM.isAppUnLocked {
                 MapView()
             } else {
-                Text("Locked")
+                AppLockView()
             }
         }
-        .onAppear(perform: authenticate)
-    }
-    
-    func authenticate() {
-        let contex = LAContext()
-        var error: NSError?
-        
-        if contex.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
-            let reason = "We need to unlock your data"
-            
-            contex.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, authenticationError in
-                if success {
-                    isUnlocked = true
-                } else {
-                    authenticate()
-                }
+        .onAppear {
+            if appLockVM.isAppLockEnabled {
+                appLockVM.appLockValidation()
             }
-        } else {
-            
         }
     }
 }

@@ -20,6 +20,9 @@
 		82C7AEBC28CE666100F0563E /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C7AEBB28CE666100F0563E /* MapView.swift */; };
 		82C7AEBE28CE66BA00F0563E /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C7AEBD28CE66BA00F0563E /* MapViewModel.swift */; };
 		82C7AEC028CE69B500F0563E /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C7AEBF28CE69B400F0563E /* Location.swift */; };
+		82C7AEC328CE7A9E00F0563E /* AppLockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C7AEC228CE7A9E00F0563E /* AppLockViewModel.swift */; };
+		82C7AEC628CE831200F0563E /* AppLockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C7AEC528CE831200F0563E /* AppLockView.swift */; };
+		82C7AEC928CE83F600F0563E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C7AEC828CE83F600F0563E /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,9 @@
 		82C7AEBB28CE666100F0563E /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		82C7AEBD28CE66BA00F0563E /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		82C7AEBF28CE69B400F0563E /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		82C7AEC228CE7A9E00F0563E /* AppLockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLockViewModel.swift; sourceTree = "<group>"; };
+		82C7AEC528CE831200F0563E /* AppLockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLockView.swift; sourceTree = "<group>"; };
+		82C7AEC828CE83F600F0563E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +158,8 @@
 		82C7AEAE28CE5A6300F0563E /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				82C7AEC428CE82D800F0563E /* CustomViews */,
+				82C7AEC128CE7A7100F0563E /* Services */,
 				82C7AEB528CE5D9A00F0563E /* Extensions */,
 			);
 			path = Common;
@@ -168,6 +176,7 @@
 		82C7AEB028CE5AE200F0563E /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				82C7AEC728CE83DF00F0563E /* Settings */,
 				82C7AEBA28CE663200F0563E /* MapView */,
 				82C7AEB428CE5D6300F0563E /* Root */,
 			);
@@ -207,6 +216,30 @@
 				82C7AEBD28CE66BA00F0563E /* MapViewModel.swift */,
 			);
 			path = MapView;
+			sourceTree = "<group>";
+		};
+		82C7AEC128CE7A7100F0563E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				82C7AEC228CE7A9E00F0563E /* AppLockViewModel.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		82C7AEC428CE82D800F0563E /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				82C7AEC528CE831200F0563E /* AppLockView.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		82C7AEC728CE83DF00F0563E /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				82C7AEC828CE83F600F0563E /* SettingsView.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,7 +379,10 @@
 				82C7AEB328CE5C0300F0563E /* User.swift in Sources */,
 				82C7AEBE28CE66BA00F0563E /* MapViewModel.swift in Sources */,
 				82C7AEB928CE600D00F0563E /* Bundle.swift in Sources */,
+				82C7AEC328CE7A9E00F0563E /* AppLockViewModel.swift in Sources */,
 				82C7AEB728CE5DC300F0563E /* FileManager.swift in Sources */,
+				82C7AEC628CE831200F0563E /* AppLockView.swift in Sources */,
+				82C7AEC928CE83F600F0563E /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,7 +545,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
-				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need to unlock your data.";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "$(PRODUCT_NAME) need Touch Id or Face ID permission for app lock";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -540,7 +576,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
-				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need to unlock your data.";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "$(PRODUCT_NAME) need Touch Id or Face ID permission for app lock";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
