@@ -6,10 +6,39 @@
 //
 
 import SwiftUI
+import LocalAuthentication
 
 struct RootView: View {
+    @State private var isUnlocked = false
+    
     var body: some View {
-        MapView()
+        VStack {
+            if isUnlocked {
+                MapView()
+            } else {
+                Text("Locked")
+            }
+        }
+        .onAppear(perform: authenticate)
+    }
+    
+    func authenticate() {
+        let contex = LAContext()
+        var error: NSError?
+        
+        if contex.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+            let reason = "We need to unlock your data"
+            
+            contex.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, authenticationError in
+                if success {
+                    isUnlocked = true
+                } else {
+                    authenticate()
+                }
+            }
+        } else {
+            
+        }
     }
 }
 

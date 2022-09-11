@@ -17,12 +17,15 @@ struct MapView: View {
                 MapAnnotation(coordinate: location.coordinate) {
                     Text(location.name)
                         .padding(5)
+                        .foregroundColor(.gray)
                         .background(
-                            Circle()
+                            RoundedRectangle(cornerRadius: 10)
                                 .fill(Color.white)
                         )
                 }
             }
+            .navigationTitle("Map")
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
