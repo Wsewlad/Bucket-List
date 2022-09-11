@@ -15,6 +15,8 @@
 		82C7AE9F28CE599A00F0563E /* BucketListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C7AE9E28CE599A00F0563E /* BucketListUITests.swift */; };
 		82C7AEA128CE599A00F0563E /* BucketListUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C7AEA028CE599A00F0563E /* BucketListUITestsLaunchTests.swift */; };
 		82C7AEB328CE5C0300F0563E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C7AEB228CE5C0300F0563E /* User.swift */; };
+		82C7AEB728CE5DC300F0563E /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C7AEB628CE5DC300F0563E /* FileManager.swift */; };
+		82C7AEB928CE600D00F0563E /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C7AEB828CE600D00F0563E /* Bundle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		82C7AE9E28CE599A00F0563E /* BucketListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListUITests.swift; sourceTree = "<group>"; };
 		82C7AEA028CE599A00F0563E /* BucketListUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		82C7AEB228CE5C0300F0563E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		82C7AEB628CE5DC300F0563E /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		82C7AEB828CE600D00F0563E /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +147,7 @@
 		82C7AEAE28CE5A6300F0563E /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				82C7AEB528CE5D9A00F0563E /* Extensions */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -158,6 +163,7 @@
 		82C7AEB028CE5AE200F0563E /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				82C7AEB428CE5D6300F0563E /* Root */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -168,6 +174,22 @@
 				82C7AEB228CE5C0300F0563E /* User.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		82C7AEB428CE5D6300F0563E /* Root */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		82C7AEB528CE5D9A00F0563E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				82C7AEB628CE5DC300F0563E /* FileManager.swift */,
+				82C7AEB828CE600D00F0563E /* Bundle.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,6 +325,8 @@
 				82C7AE8628CE599600F0563E /* ContentView.swift in Sources */,
 				82C7AE8428CE599600F0563E /* BucketListApp.swift in Sources */,
 				82C7AEB328CE5C0300F0563E /* User.swift in Sources */,
+				82C7AEB928CE600D00F0563E /* Bundle.swift in Sources */,
+				82C7AEB728CE5DC300F0563E /* FileManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
