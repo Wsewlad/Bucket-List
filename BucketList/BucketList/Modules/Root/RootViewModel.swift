@@ -7,9 +7,15 @@
 
 import Foundation
 
+enum Tabs {
+    case map, settings
+}
+
 extension RootView {
     @MainActor
     final class RootViewModel: ObservableObject {
+        
         @Published var selectedTab: Tabs = .map
+        
     }
 }

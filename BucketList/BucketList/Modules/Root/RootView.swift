@@ -7,17 +7,13 @@
 
 import SwiftUI
 
-enum Tabs {
-    case map, settings
-}
-
 struct RootView: View {
     @EnvironmentObject var appLockVM: AppLockViewModel
     @StateObject private var viewModel = RootViewModel()
     
     var body: some View {
         ZStack {
-            if !appLockVM.isAppLockEnabled || appLockVM.isAppUnLocked {
+            if isUnlocked {
                 VStack {
                     TabView(selection: $viewModel.selectedTab) {
                         MapView().tabItem {
@@ -44,6 +40,13 @@ struct RootView: View {
                 appLockVM.appLockValidation()
             }
         }
+    }
+}
+
+//MARK: - Computed Properties
+private extension RootView {
+    var isUnlocked: Bool {
+        !appLockVM.isAppLockEnabled || appLockVM.isAppUnLocked
     }
 }
 

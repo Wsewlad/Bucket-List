@@ -45,10 +45,7 @@ private extension BucketListApp {
     func configureNavBar() {
         let coloredAppearance = UINavigationBarAppearance()
         coloredAppearance.configureWithOpaqueBackground()
-//        coloredAppearance.titleTextAttributes = [.font: UIFont(name: "Montserrat SemiBold", size: 16)!]
-//        coloredAppearance.largeTitleTextAttributes = [.font: UIFont(name: "Montserrat Bold", size: 34)!]
         coloredAppearance.shadowColor = .clear
-//        coloredAppearance.backgroundColor = UIColor(named: "lcLightGrayBackground")
         UINavigationBar.appearance().standardAppearance = coloredAppearance
         UINavigationBar.appearance().compactAppearance = coloredAppearance
         UINavigationBar.appearance().scrollEdgeAppearance = coloredAppearance
