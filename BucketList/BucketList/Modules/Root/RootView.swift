@@ -18,13 +18,13 @@ struct RootView: View {
                     TabView(selection: $viewModel.selectedTab) {
                         MapView().tabItem {
                             Image(systemName: "map")
-                            Text("Map")
+                            Text(String.localized().root.map)
                         }
                         .tag(Tabs.map)
                         
                         SettingsView().tabItem {
                             Image(systemName: "slider.horizontal.3")
-                            Text("Settings")
+                            Text(String.localized().root.settings)
                         }
                         .tag(Tabs.settings)
                     }

@@ -1,0 +1,24 @@
+/* 
+  Localizable.strings
+  BucketList
+
+  Created by  Vladyslav Fil on 14.09.2022.
+  
+*/
+
+//MARK: - Root
+"root_map" = "Map";
+"root_settings" = "Settings";
+
+//"root_" = "";
+
+//MARK: - Settings
+"settings_title" = "Settings";
+"settings_appLock" = "App Lock";
+
+//"settings_" = "";
+
+//MARK: - Map
+"map_title" = "Map";
+
+//"map_" = "";

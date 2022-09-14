@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		82A8EE9C28D271FA00826F0F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 82A8EE9E28D271FA00826F0F /* Localizable.strings */; };
+		82A8EEA128D272F100826F0F /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A8EEA028D272F100826F0F /* String.swift */; };
+		82A8EEA428D2732600826F0F /* Localizations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A8EEA328D2732600826F0F /* Localizations.swift */; };
 		82C7AE8428CE599600F0563E /* BucketListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C7AE8328CE599600F0563E /* BucketListApp.swift */; };
 		82C7AE8628CE599600F0563E /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C7AE8528CE599600F0563E /* RootView.swift */; };
 		82C7AE8828CE599900F0563E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82C7AE8728CE599900F0563E /* Assets.xcassets */; };
@@ -44,6 +47,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		82A8EE9D28D271FA00826F0F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		82A8EEA028D272F100826F0F /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		82A8EEA328D2732600826F0F /* Localizations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizations.swift; sourceTree = "<group>"; };
 		82C7AE8028CE599600F0563E /* BucketList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BucketList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82C7AE8328CE599600F0563E /* BucketListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListApp.swift; sourceTree = "<group>"; };
 		82C7AE8528CE599600F0563E /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -91,6 +97,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		82A8EE9F28D272D200826F0F /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				82C7AEB628CE5DC300F0563E /* FileManager.swift */,
+				82C7AEB828CE600D00F0563E /* Bundle.swift */,
+				82A8EEA028D272F100826F0F /* String.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		82A8EEA228D2731B00826F0F /* Localizations */ = {
+			isa = PBXGroup;
+			children = (
+				82A8EEA328D2732600826F0F /* Localizations.swift */,
+			);
+			path = Localizations;
+			sourceTree = "<group>";
+		};
 		82C7AE7728CE599600F0563E = {
 			isa = PBXGroup;
 			children = (
@@ -152,7 +176,9 @@
 		82C7AEAD28CE5A3400F0563E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				82A8EEA228D2731B00826F0F /* Localizations */,
 				82C7AE8728CE599900F0563E /* Assets.xcassets */,
+				82A8EE9E28D271FA00826F0F /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -206,8 +232,7 @@
 		82C7AEB528CE5D9A00F0563E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				82C7AEB628CE5DC300F0563E /* FileManager.swift */,
-				82C7AEB828CE600D00F0563E /* Bundle.swift */,
+				82A8EE9F28D272D200826F0F /* Foundation */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -350,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				82C7AE8B28CE599900F0563E /* Preview Assets.xcassets in Resources */,
+				82A8EE9C28D271FA00826F0F /* Localizable.strings in Resources */,
 				82C7AE8828CE599900F0563E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,8 +402,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				82C7AE8628CE599600F0563E /* RootView.swift in Sources */,
+				82A8EEA128D272F100826F0F /* String.swift in Sources */,
 				82C7AEBC28CE666100F0563E /* MapView.swift in Sources */,
 				82C7AEC028CE69B500F0563E /* Location.swift in Sources */,
+				82A8EEA428D2732600826F0F /* Localizations.swift in Sources */,
 				82C7AE8428CE599600F0563E /* BucketListApp.swift in Sources */,
 				82C7AEB328CE5C0300F0563E /* User.swift in Sources */,
 				82C7AEBE28CE66BA00F0563E /* MapViewModel.swift in Sources */,
@@ -421,6 +449,17 @@
 			targetProxy = 82C7AE9B28CE599A00F0563E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		82A8EE9E28D271FA00826F0F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				82A8EE9D28D271FA00826F0F /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		82C7AEA228CE599A00F0563E /* Debug */ = {

@@ -14,15 +14,15 @@ struct SettingsView: View {
         NavigationView {
             VStack {
                 Form {
-                    Toggle(isOn: $appLockVM.isAppLockEnabled, label: {
-                        Text("App Lock")
-                    })
-                    .onChange(of: appLockVM.isAppLockEnabled, perform: { value in
+                    Toggle(isOn: $appLockVM.isAppLockEnabled) {
+                        Text(String.localized().settings.appLock)
+                    }
+                    .onChange(of: appLockVM.isAppLockEnabled) { value in
                         appLockVM.appLockStateChange(appLockState: value)
-                    })
+                    }
                 }
             }
-            .navigationTitle("Settings")
+            .navigationTitle(String.localized().settings.title)
             .navigationBarTitleDisplayMode(.inline)
         }
     }

@@ -24,7 +24,7 @@ struct MapView: View {
                         )
                 }
             }
-            .navigationTitle("Map")
+            .navigationTitle(String.localized().map.title)
             .navigationBarTitleDisplayMode(.inline)
         }
     }
