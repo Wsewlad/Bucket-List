@@ -17,13 +17,13 @@ struct RootView: View {
                 VStack {
                     TabView(selection: $viewModel.selectedTab) {
                         MapView().tabItem {
-                            Image(systemName: "map")
+                            Image.sf(.map)
                             Text(String.localized().root.map)
                         }
                         .tag(Tabs.map)
                         
                         SettingsView().tabItem {
-                            Image(systemName: "slider.horizontal.3")
+                            Image.sf(.sliderHorizontal3)
                             Text(String.localized().root.settings)
                         }
                         .tag(Tabs.settings)
