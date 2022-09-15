@@ -16,8 +16,10 @@ extension Image {
 //MARK: - SF Symbols
 extension Image {
     enum Symbol: String {
-      case map = "map"
-      case sliderHorizontal3 = "slider.horizontal.3"
+        case map
+        case sliderHorizontal3 = "slider.horizontal.3"
+        case starCircle = "star.circle"
+        case plus
     }
     
     static func sf(_ name: Symbol) -> Self {
@@ -28,5 +30,13 @@ extension Image {
 extension Image {
     var template: Self {
         self.renderingMode(.template)
+    }
+    
+    func aspectFit() -> some View {
+        self.resizable().aspectRatio(contentMode: .fit)
+    }
+    
+    func aspectFill()  -> some View {
+        self.resizable().aspectRatio(contentMode: .fill)
     }
 }

@@ -12,13 +12,25 @@ extension MapView {
     @MainActor
     final class ViewModel: ObservableObject {
         @Published var mapRegion = MKCoordinateRegion(
-            center: CLLocationCoordinate2D(latitude: 51.5, longitude: -0.12),
-            span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
+            center: CLLocationCoordinate2D(latitude: 50, longitude: 0),
+            span: MKCoordinateSpan(latitudeDelta: 25, longitudeDelta: 25)
         )
         
-        var locations = [
-            Location(id: .init(value: 1), name: "Buckingham Palace", coordinate: CLLocationCoordinate2D(latitude: 51.301, longitude: -0.141)),
-            Location(id: .init(value: 2), name: "Toear of London", coordinate: CLLocationCoordinate2D(latitude: 51.508, longitude: -0.076))
-        ]
+        @Published var locations = [Location]()
+        
+        func addNewLocation() {
+            let newLocation = Location(
+                id: .init(value: Int.random(in: 0...100)),
+                name: "New Location",
+                description: "",
+                latitude: mapRegion.center.latitude,
+                longitude: mapRegion.center.longitude
+            )
+            locations.append(newLocation)
+        }
+        
+        init() {
+            locations = [.example]
+        }
     }
 }

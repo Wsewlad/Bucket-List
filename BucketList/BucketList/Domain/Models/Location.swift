@@ -8,12 +8,29 @@
 import Foundation
 import MapKit
 
-struct Location: Identifiable {
-    struct Id: Hashable {
+struct Location: Identifiable, Codable, Equatable {
+    struct Id: Hashable, Codable {
         let value: Int
     }
     
     let id: Id
-    let name: String
-    let coordinate: CLLocationCoordinate2D
+    var name: String
+    var description: String
+    let latitude: Double
+    let longitude: Double
+    
+    var coordinate: CLLocationCoordinate2D {
+        .init(latitude: latitude, longitude: longitude)
+    }
+}
+
+//MARK: - Example
+extension Location {
+    static let example = Location(
+        id: .init(value: 1),
+        name: "Buckingham Palace",
+        description: "Where Queen Elizabet lives with her dorgis",
+        latitude: 51.501,
+        longitude: -0.141
+    )
 }

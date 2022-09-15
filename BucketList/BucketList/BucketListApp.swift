@@ -15,7 +15,6 @@ struct BucketListApp: App {
     @State var blurRadius: CGFloat = 0
     
     init() {
-        configureNavBar()
         configureTabBar()
     }
     
@@ -37,18 +36,6 @@ struct BucketListApp: App {
                     }
                 })
         }
-    }
-}
-
-//MARK: - configureNavBar
-private extension BucketListApp {
-    func configureNavBar() {
-        let coloredAppearance = UINavigationBarAppearance()
-        coloredAppearance.configureWithOpaqueBackground()
-        coloredAppearance.shadowColor = .clear
-        UINavigationBar.appearance().standardAppearance = coloredAppearance
-        UINavigationBar.appearance().compactAppearance = coloredAppearance
-        UINavigationBar.appearance().scrollEdgeAppearance = coloredAppearance
     }
 }
 
