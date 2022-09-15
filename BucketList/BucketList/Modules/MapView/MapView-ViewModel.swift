@@ -1,5 +1,5 @@
 //
-//  MapViewModel.swift
+//  MapView-ViewModel.swift
 //  BucketList
 //
 //  Created by  Vladyslav Fil on 11.09.2022.
@@ -15,10 +15,14 @@ extension MapView {
             center: CLLocationCoordinate2D(latitude: 50, longitude: 0),
             span: MKCoordinateSpan(latitudeDelta: 25, longitudeDelta: 25)
         )
+        @Published private(set) var locations = [Location]()
+        @Published var selectedPlace: Location? = nil
         
-        @Published var locations = [Location]()
+        init() {
+            locations = [.example]
+        }
         
-        func addNewLocation() {
+        func addLocation() {
             let newLocation = Location(
                 id: .init(value: Int.random(in: 0...100)),
                 name: "New Location",
@@ -29,8 +33,11 @@ extension MapView {
             locations.append(newLocation)
         }
         
-        init() {
-            locations = [.example]
+        func update(_ location: Location) {
+            if let index = locations.firstIndex { $0.id == location.id } {
+                locations[index] = location
+            }
         }
+        
     }
 }

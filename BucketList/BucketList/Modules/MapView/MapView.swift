@@ -11,8 +11,6 @@ import MapKit
 struct MapView: View {
     @StateObject private var viewModel = ViewModel()
     
-    @State private var selectedPlace: Location? = nil
-    
     var body: some View {
         ZStack {
             Map(coordinateRegion: $viewModel.mapRegion, annotationItems: viewModel.locations) { location in
@@ -29,7 +27,7 @@ struct MapView: View {
                             .fixedSize()
                     }
                     .onTapGesture {
-                        selectedPlace = location
+                        viewModel.selectedPlace = location
                     }
                 }
             }
@@ -48,7 +46,7 @@ struct MapView: View {
                     Spacer()
                     
                     Button {
-                        viewModel.addNewLocation()
+                        viewModel.addLocation()
                     } label: {
                         Image.sf(.plus)
                             .padding()
@@ -61,11 +59,9 @@ struct MapView: View {
                 }
             }
         }
-        .sheet(item: $selectedPlace) { place in
-            EditView(location: place) { newLocation in
-                if let index = viewModel.locations.firstIndex(of: place) {
-                    viewModel.locations[index] = newLocation
-                }
+        .sheet(item: $viewModel.selectedPlace) { place in
+            EditView(location: place) { location in
+                viewModel.update(location)
             }
         }
     }
