@@ -8,12 +8,25 @@
 import SwiftUI
 import MapKit
 
-struct MapView: View {
-    @StateObject private var viewModel = ViewModel()
+struct MapComponent: View {
+    struct Props {
+        let mapRegion: Binding<MKCoordinateRegion>
+        let locations: [Location]
+        let addLocationAction: () -> Void
+        let update: (Location) -> Void
+    }
+    
+    let props: Props
+    
+    init(props: Props) {
+        self.props = props
+    }
+    
+    @State var selectedPlace: Location?
     
     var body: some View {
         ZStack {
-            Map(coordinateRegion: $viewModel.mapRegion, annotationItems: viewModel.locations) { location in
+            Map(coordinateRegion: props.mapRegion, annotationItems: props.locations) { location in
                 MapAnnotation(coordinate: location.coordinate) {
                     VStack {
                         Image.sf(.starCircle)
@@ -27,7 +40,7 @@ struct MapView: View {
                             .fixedSize()
                     }
                     .onTapGesture {
-                        viewModel.selectedPlace = location
+                        selectedPlace = location
                     }
                 }
             }
@@ -45,9 +58,7 @@ struct MapView: View {
                 HStack {
                     Spacer()
                     
-                    Button {
-                        viewModel.addLocation()
-                    } label: {
+                    Button(action: props.addLocationAction) {
                         Image.sf(.plus)
                             .padding()
                             .background(.black.opacity(0.75))
@@ -56,12 +67,13 @@ struct MapView: View {
                             .clipShape(Circle())
                     }
                     .padding(.trailing)
+                    .padding(.bottom)
                 }
             }
         }
-        .sheet(item: $viewModel.selectedPlace) { place in
+        .sheet(item: $selectedPlace) { place in
             EditView(location: place) { location in
-                viewModel.update(location)
+                props.update(location)
             }
         }
     }
@@ -70,6 +82,18 @@ struct MapView: View {
 //MARK: - Preview
 struct MapView_Previews: PreviewProvider {
     static var previews: some View {
-        MapView()
+        MapComponent(
+            props: .init(
+                mapRegion: .constant(
+                    MKCoordinateRegion(
+                        center: CLLocationCoordinate2D(latitude: 50, longitude: 0),
+                        span: MKCoordinateSpan(latitudeDelta: 25, longitudeDelta: 25)
+                    )
+                ),
+                locations: [.example],
+                addLocationAction: {},
+                update: { _ in }
+            )
+        )
     }
 }

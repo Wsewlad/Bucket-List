@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		827F296228D3B8D6005B24F5 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827F296128D3B8D6005B24F5 /* Result.swift */; };
 		827F296428D3BB43005B24F5 /* EditView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827F296328D3BB43005B24F5 /* EditView-ViewModel.swift */; };
+		827F296628D3D082005B24F5 /* MapContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827F296528D3D082005B24F5 /* MapContainer.swift */; };
 		82A8EE9C28D271FA00826F0F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 82A8EE9E28D271FA00826F0F /* Localizable.strings */; };
 		82A8EEA128D272F100826F0F /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A8EEA028D272F100826F0F /* String.swift */; };
 		82A8EEA428D2732600826F0F /* Localizations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A8EEA328D2732600826F0F /* Localizations.swift */; };
@@ -23,8 +24,7 @@
 		82C7AEA128CE599A00F0563E /* BucketListUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C7AEA028CE599A00F0563E /* BucketListUITestsLaunchTests.swift */; };
 		82C7AEB328CE5C0300F0563E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C7AEB228CE5C0300F0563E /* User.swift */; };
 		82C7AEB728CE5DC300F0563E /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C7AEB628CE5DC300F0563E /* FileManager.swift */; };
-		82C7AEB928CE600D00F0563E /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C7AEB828CE600D00F0563E /* Bundle.swift */; };
-		82C7AEBC28CE666100F0563E /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C7AEBB28CE666100F0563E /* MapView.swift */; };
+		82C7AEBC28CE666100F0563E /* MapComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C7AEBB28CE666100F0563E /* MapComponent.swift */; };
 		82C7AEBE28CE66BA00F0563E /* MapView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C7AEBD28CE66BA00F0563E /* MapView-ViewModel.swift */; };
 		82C7AEC028CE69B500F0563E /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C7AEBF28CE69B400F0563E /* Location.swift */; };
 		82C7AEC328CE7A9E00F0563E /* AppLockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C7AEC228CE7A9E00F0563E /* AppLockViewModel.swift */; };
@@ -53,6 +53,7 @@
 /* Begin PBXFileReference section */
 		827F296128D3B8D6005B24F5 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		827F296328D3BB43005B24F5 /* EditView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditView-ViewModel.swift"; sourceTree = "<group>"; };
+		827F296528D3D082005B24F5 /* MapContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapContainer.swift; sourceTree = "<group>"; };
 		82A8EE9D28D271FA00826F0F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		82A8EEA028D272F100826F0F /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		82A8EEA328D2732600826F0F /* Localizations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizations.swift; sourceTree = "<group>"; };
@@ -70,8 +71,7 @@
 		82C7AEA028CE599A00F0563E /* BucketListUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		82C7AEB228CE5C0300F0563E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		82C7AEB628CE5DC300F0563E /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
-		82C7AEB828CE600D00F0563E /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
-		82C7AEBB28CE666100F0563E /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		82C7AEBB28CE666100F0563E /* MapComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapComponent.swift; sourceTree = "<group>"; };
 		82C7AEBD28CE66BA00F0563E /* MapView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapView-ViewModel.swift"; sourceTree = "<group>"; };
 		82C7AEBF28CE69B400F0563E /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		82C7AEC228CE7A9E00F0563E /* AppLockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLockViewModel.swift; sourceTree = "<group>"; };
@@ -114,11 +114,19 @@
 			path = EditView;
 			sourceTree = "<group>";
 		};
+		827F296728D3D0CD005B24F5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				827F296528D3D082005B24F5 /* MapContainer.swift */,
+				82C7AEBB28CE666100F0563E /* MapComponent.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		82A8EE9F28D272D200826F0F /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
 				82C7AEB628CE5DC300F0563E /* FileManager.swift */,
-				82C7AEB828CE600D00F0563E /* Bundle.swift */,
 				82A8EEA028D272F100826F0F /* String.swift */,
 			);
 			path = Foundation;
@@ -268,7 +276,7 @@
 		82C7AEBA28CE663200F0563E /* MapView */ = {
 			isa = PBXGroup;
 			children = (
-				82C7AEBB28CE666100F0563E /* MapView.swift */,
+				827F296728D3D0CD005B24F5 /* View */,
 				82C7AEBD28CE66BA00F0563E /* MapView-ViewModel.swift */,
 			);
 			path = MapView;
@@ -431,7 +439,7 @@
 			files = (
 				82C7AE8628CE599600F0563E /* RootView.swift in Sources */,
 				82A8EEA128D272F100826F0F /* String.swift in Sources */,
-				82C7AEBC28CE666100F0563E /* MapView.swift in Sources */,
+				82C7AEBC28CE666100F0563E /* MapComponent.swift in Sources */,
 				82C7AEC028CE69B500F0563E /* Location.swift in Sources */,
 				82A8EEA728D278D000826F0F /* Image.swift in Sources */,
 				82A8EEA428D2732600826F0F /* Localizations.swift in Sources */,
@@ -439,7 +447,6 @@
 				82C7AE8428CE599600F0563E /* BucketListApp.swift in Sources */,
 				82C7AEB328CE5C0300F0563E /* User.swift in Sources */,
 				82C7AEBE28CE66BA00F0563E /* MapView-ViewModel.swift in Sources */,
-				82C7AEB928CE600D00F0563E /* Bundle.swift in Sources */,
 				82A8EEA928D285B300826F0F /* EditView.swift in Sources */,
 				82C7AEC328CE7A9E00F0563E /* AppLockViewModel.swift in Sources */,
 				82C7AEB728CE5DC300F0563E /* FileManager.swift in Sources */,
@@ -447,6 +454,7 @@
 				827F296228D3B8D6005B24F5 /* Result.swift in Sources */,
 				82C7AECB28CE853400F0563E /* RootViewModel.swift in Sources */,
 				82C7AEC928CE83F600F0563E /* SettingsView.swift in Sources */,
+				827F296628D3D082005B24F5 /* MapContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

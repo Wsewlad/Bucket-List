@@ -16,7 +16,7 @@ struct RootView: View {
             if isUnlocked {
                 VStack {
                     TabView(selection: $viewModel.selectedTab) {
-                        MapView().tabItem {
+                        MapContainer().tabItem {
                             Image.sf(.map)
                             Text(String.localized().root.map)
                         }

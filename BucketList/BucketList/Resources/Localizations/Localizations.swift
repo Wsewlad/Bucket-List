@@ -15,6 +15,7 @@ struct Localizations {
     var root: Root { .init() }
     var settings: Settings { .init() }
     var map: Map { .init() }
+    var errors: Errors { .init() }
 }
 
 extension Localizations {
@@ -38,7 +39,15 @@ extension Localizations {
     //MARK: - Map
     struct Map {
         var title: String { LocalizedString("map_title") }
+        var locationDefaultName: String { LocalizedString("map_locationDefaultName") }
         
 //        var : String { LocalizedString("map_") }
+    }
+    
+    //MARK: - Errors
+    struct Errors {
+        var unableToSaveData: String { LocalizedString("errors_unableToSaveData") }
+        
+//        var : String { LocalizedString("errors_") }
     }
 }

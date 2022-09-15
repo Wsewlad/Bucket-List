@@ -20,5 +20,11 @@
 
 //MARK: - Map
 "map_title" = "Map";
+"map_locationDefaultName" = "New Location";
 
 //"map_" = "";
+
+//MARK: - Errors
+"errors_unableToSaveData" = "Unable to save data.";
+
+//"errors_" = "";
