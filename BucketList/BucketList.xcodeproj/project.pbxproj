@@ -105,13 +105,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		827F296028D3B5EF005B24F5 /* EditView */ = {
+		827F296028D3B5EF005B24F5 /* EditPlace */ = {
 			isa = PBXGroup;
 			children = (
 				82A8EEA828D285B300826F0F /* EditView.swift */,
 				827F296328D3BB43005B24F5 /* EditView-ViewModel.swift */,
 			);
-			path = EditView;
+			path = EditPlace;
 			sourceTree = "<group>";
 		};
 		827F296728D3D0CD005B24F5 /* View */ = {
@@ -237,9 +237,9 @@
 		82C7AEB028CE5AE200F0563E /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				827F296028D3B5EF005B24F5 /* EditView */,
+				827F296028D3B5EF005B24F5 /* EditPlace */,
 				82C7AEC728CE83DF00F0563E /* Settings */,
-				82C7AEBA28CE663200F0563E /* MapView */,
+				82C7AEBA28CE663200F0563E /* Map */,
 				82C7AEB428CE5D6300F0563E /* Root */,
 			);
 			path = Modules;
@@ -273,13 +273,13 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		82C7AEBA28CE663200F0563E /* MapView */ = {
+		82C7AEBA28CE663200F0563E /* Map */ = {
 			isa = PBXGroup;
 			children = (
 				827F296728D3D0CD005B24F5 /* View */,
 				82C7AEBD28CE66BA00F0563E /* MapView-ViewModel.swift */,
 			);
-			path = MapView;
+			path = Map;
 			sourceTree = "<group>";
 		};
 		82C7AEC128CE7A7100F0563E /* Services */ = {

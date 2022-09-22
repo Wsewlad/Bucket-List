@@ -16,6 +16,5 @@ extension RootView {
     final class RootViewModel: ObservableObject {
         
         @Published var selectedTab: Tabs = .map
-        
     }
 }
