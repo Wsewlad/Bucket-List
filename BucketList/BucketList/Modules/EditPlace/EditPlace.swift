@@ -28,30 +28,9 @@ struct EditPlace: View {
     var body: some View {
         NavigationView {
             Form {
-                Section {
-                    TextField(String.localized().editPlace.namePlaceholder, text: $name)
-                    TextField(String.localized().editPlace.descriptionPlaceholder, text: $description)
-                }
+                inputFieldsSectionView
                 
-                Section(String.localized().editPlace.placesTitle) {
-                    switch viewModel.loadingState {
-                    case .loading:
-                        Text(String.localized().common.loading)
-                    case .loaded:
-                        ForEach(viewModel.pages, id: \.pageid) { page in
-                            VStack(alignment: .leading) {
-                                Text(page.title)
-                                    .font(.headline)
-                                
-                                Text(page.description)
-                                    .font(.body)
-                                    .italic()
-                            }
-                        }
-                    case .failed:
-                        Text(String.localized().common.tryLater)
-                    }
-                }
+                placesSectionView
             }
             .navigationTitle(String.localized().editPlace.title)
             .toolbar {
@@ -71,6 +50,42 @@ struct EditPlace: View {
     }
 }
 
+//MARK: - Input Fields Section
+private extension EditPlace {
+    var inputFieldsSectionView: some View {
+        Section {
+            TextField(String.localized().editPlace.namePlaceholder, text: $name)
+            TextField(String.localized().editPlace.descriptionPlaceholder, text: $description)
+        }
+    }
+}
+
+//MARK: - Places Section
+private extension EditPlace {
+    var placesSectionView: some View {
+        Section(String.localized().editPlace.placesTitle) {
+            switch viewModel.loadingState {
+            case .loading:
+                Text(String.localized().common.loading)
+            case .loaded:
+                ForEach(viewModel.pages, id: \.pageid) { page in
+                    VStack(alignment: .leading) {
+                        Text(page.title)
+                            .font(.headline)
+                        
+                        Text(page.description)
+                            .font(.body)
+                            .italic()
+                    }
+                }
+            case .failed:
+                Text(String.localized().common.tryLater)
+            }
+        }
+    }
+}
+
+//MARK: - Previwer
 struct EditView_Previews: PreviewProvider {
     static var previews: some View {
         EditPlace(location: .example, onSave: { _ in })
