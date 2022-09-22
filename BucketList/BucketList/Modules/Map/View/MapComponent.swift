@@ -72,7 +72,7 @@ struct MapComponent: View {
             }
         }
         .sheet(item: $selectedPlace) { place in
-            EditView(location: place) { location in
+            EditPlace(location: place) { location in
                 props.update(location)
             }
         }

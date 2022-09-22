@@ -12,13 +12,25 @@ func LocalizedString(_ key: String) -> String {
 }
 
 struct Localizations {
+    var common: Common { .init() }
     var root: Root { .init() }
     var settings: Settings { .init() }
     var map: Map { .init() }
     var errors: Errors { .init() }
+    var editPlace: EditPlace { .init() }
 }
 
 extension Localizations {
+    //MARK: - Common
+    struct Common {
+        var loading: String { LocalizedString("common_loading") }
+        var tryLater: String { LocalizedString("common_tryLater") }
+        var save: String { LocalizedString("common_save") }
+        
+//        var : String { LocalizedString("common_") }
+    }
+    
+    
     //MARK: - Root
     struct Root {
         var map: String { LocalizedString("root_map") }
@@ -49,5 +61,15 @@ extension Localizations {
         var unableToSaveData: String { LocalizedString("errors_unableToSaveData") }
         
 //        var : String { LocalizedString("errors_") }
+    }
+    
+    //MARK: - EditPlace
+    struct EditPlace {
+        var namePlaceholder: String { LocalizedString("editPlace_namePlaceholder") }
+        var descriptionPlaceholder: String { LocalizedString("editPlace_descriptionPlaceholder") }
+        var placesTitle: String { LocalizedString("editPlace_placesTitle") }
+        var title: String { LocalizedString("editPlace_title") }
+        
+//        var : String { LocalizedString("editPlace_") }
     }
 }

@@ -6,6 +6,13 @@
   
 */
 
+//MARK: - Common
+"common_loading" = "Loading...";
+"common_tryLater" = "Please try again later.";
+"common_save" = "Save";
+
+//"common_" = "";
+
 //MARK: - Root
 "root_map" = "Map";
 "root_settings" = "Settings";
@@ -28,3 +35,11 @@
 "errors_unableToSaveData" = "Unable to save data.";
 
 //"errors_" = "";
+
+//MARK: - EditPlace
+"editPlace_namePlaceholder" = "Place name";
+"editPlace_descriptionPlaceholder" = "Description";
+"editPlace_placesTitle" = "Nearby...";
+"editPlace_title" = "Place details";
+
+//"editPlace_" = "";

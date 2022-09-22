@@ -29,30 +29,33 @@ struct EditPlace: View {
         NavigationView {
             Form {
                 Section {
-                    TextField("Place name", text: $name)
-                    TextField("Description", text: $description)
+                    TextField(String.localized().editPlace.namePlaceholder, text: $name)
+                    TextField(String.localized().editPlace.descriptionPlaceholder, text: $description)
                 }
                 
-                Section("Nearby...") {
+                Section(String.localized().editPlace.placesTitle) {
                     switch viewModel.loadingState {
                     case .loading:
-                        Text("Loading...")
+                        Text(String.localized().common.loading)
                     case .loaded:
                         ForEach(viewModel.pages, id: \.pageid) { page in
-                            Text(page.title)
-                                .font(.headline)
-                            + Text(": ")
-                            + Text(page.description)
-                                .italic()
+                            VStack(alignment: .leading) {
+                                Text(page.title)
+                                    .font(.headline)
+                                
+                                Text(page.description)
+                                    .font(.body)
+                                    .italic()
+                            }
                         }
                     case .failed:
-                        Text("Please try again later.")
+                        Text(String.localized().common.tryLater)
                     }
                 }
             }
-            .navigationTitle("Place details")
+            .navigationTitle(String.localized().editPlace.title)
             .toolbar {
-                Button("Save") {
+                Button(String.localized().common.save) {
                     var newLocation = location
                     newLocation.name = name
                     newLocation.description = description
@@ -66,8 +69,6 @@ struct EditPlace: View {
             }
         }
     }
-    
-    
 }
 
 struct EditView_Previews: PreviewProvider {
