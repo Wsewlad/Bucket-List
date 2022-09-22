@@ -28,20 +28,15 @@ struct MapComponent: View {
         ZStack {
             Map(coordinateRegion: props.mapRegion, annotationItems: props.locations) { location in
                 MapAnnotation(coordinate: location.coordinate) {
-                    VStack {
-                        Image.sf(.starCircle)
-                            .aspectFit()
-                            .foregroundColor(.red)
-                            .frame(width: 44, height: 44)
-                            .background(.white)
-                            .clipShape(Circle())
-                        
-                        Text(location.name)
-                            .fixedSize()
-                    }
-                    .onTapGesture {
-                        selectedPlace = location
-                    }
+                    Image.sf(.starCircle)
+                        .aspectFit()
+                        .foregroundColor(.red)
+                        .frame(width: 44, height: 44)
+                        .background(.white)
+                        .clipShape(Circle())
+                        .onTapGesture {
+                            selectedPlace = location
+                        }
                 }
             }
             .navigationTitle(String.localized().map.title)

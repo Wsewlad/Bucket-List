@@ -33,15 +33,9 @@ struct EditPlace: View {
                 placesSectionView
             }
             .navigationTitle(String.localized().editPlace.title)
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                Button(String.localized().common.save) {
-                    var newLocation = location
-                    newLocation.name = name
-                    newLocation.description = description
-                    
-                    onSave(newLocation)
-                    dismiss()
-                }
+                Button(String.localized().common.save, action: onSaveProxy)
             }
             .task {
                 await viewModel.fetchNearbyPlaces(location)
@@ -69,19 +63,29 @@ private extension EditPlace {
                 Text(String.localized().common.loading)
             case .loaded:
                 ForEach(viewModel.pages, id: \.pageid) { page in
-                    VStack(alignment: .leading) {
-                        Text(page.title)
-                            .font(.headline)
-                        
-                        Text(page.description)
-                            .font(.body)
-                            .italic()
-                    }
+                    PageRow(page: page, action: { choose(page) })
                 }
             case .failed:
                 Text(String.localized().common.tryLater)
             }
         }
+    }
+}
+
+//MARK: - Functions
+private extension EditPlace {
+    func choose(_ place: Page) {
+        name = place.title
+        description = place.description
+    }
+    
+    func onSaveProxy() {
+        var newLocation = location
+        newLocation.name = name
+        newLocation.description = description
+        
+        onSave(newLocation)
+        dismiss()
     }
 }
 
