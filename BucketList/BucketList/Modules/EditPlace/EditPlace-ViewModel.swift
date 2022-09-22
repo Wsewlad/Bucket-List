@@ -1,5 +1,5 @@
 //
-//  EditView-ViewModel.swift
+//  EditPlace-ViewModel.swift
 //  BucketList
 //
 //  Created by  Vladyslav Fil on 15.09.2022.
@@ -7,13 +7,13 @@
 
 import Foundation
 
-extension EditView {
+extension EditPlace {
     enum LoadingState {
         case loading, loaded, failed
     }
     
     @MainActor
-    final class EditViewModel: ObservableObject {
+    final class EditPlaceModel: ObservableObject {
         @Published var loadingState: LoadingState = .loading
         @Published var pages = [Page]()
         

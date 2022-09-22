@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct EditView: View {
-    @StateObject private var viewModel = EditViewModel()
+struct EditPlace: View {
+    @StateObject private var viewModel = EditPlaceModel()
     
     @Environment(\.dismiss) var dismiss
     
@@ -72,6 +72,6 @@ struct EditView: View {
 
 struct EditView_Previews: PreviewProvider {
     static var previews: some View {
-        EditView(location: .example, onSave: { _ in })
+        EditPlace(location: .example, onSave: { _ in })
     }
 }
